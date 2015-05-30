@@ -2,9 +2,6 @@
 
 a {
   text-decoration: none;
-  color: white;
-  font-weight: 300;
-  padding: 5px 5px;
 }
 
 body, html {
@@ -39,23 +36,30 @@ nav {
   bottom: 10px;
   right: 0;
   color: #aaaaaa;
-}
 
-nav ul {
-}
+  ul {
+    li {
+      list-style-type: none;
+      text-decoration: none;
+      display: inline;
+      margin: 10px 5px;
+      padding: 10px;
 
-nav ul li {
-  list-style-type: none;
-  text-decoration: none;
-  display: inline;
-  margin: 10px 5px;
-  padding: 10px;
-}
+      &:hover {
+        background-color: #610200;
+      }
 
-nav ul li.active a {
-  border-bottom: 2px #ffffff solid;
-}
+      a {
+        color: white;
+        font-weight: 300;
+        padding: 5px 5px;
+      }
+    }
 
-nav ul li:hover {
-  background-color: #610200;
+    li.active {
+      a {
+        border-bottom: 2px #ffffff solid;
+      }
+    }
+  }
 }
