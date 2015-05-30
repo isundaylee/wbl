@@ -46,3 +46,6 @@ end
 
 # Heroku gem
 gem 'rails_12factor', group: :production
+
+# Puma server
+gem 'puma'
