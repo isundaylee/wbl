@@ -96,6 +96,15 @@ nav {
     border-right: 10px solid white;
     background-color: white;
     float: right;
+
+    &:hover {
+      background-color: $cc-red-dark;
+      border-top: 6px solid $cc-red-dark;
+      border-bottom: 6px solid $cc-red-dark;
+      border-left: 10px solid $cc-red-dark;
+      border-right: 10px solid $cc-red-dark;
+      color: white;
+    }
   }
 }
 
