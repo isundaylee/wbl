@@ -71,10 +71,10 @@
 
 #exec_showcase {
   overflow: auto;
-  padding-top: 20px;
+  padding: 20px 0;
 
   .exec-box {
-    width: 33%;
+    width: 33.333%;
     box-sizing: border-box;
     float: left;
     height: 200px;
