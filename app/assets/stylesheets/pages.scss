@@ -2,16 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'variables';
+
 // Homepage related css
 
 
 #intro_span {
   position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 
   // The image
   #homespan {
     width: 140%;
     margin-left: -18%;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
   }
 
   #intro_overlay {
@@ -46,6 +54,64 @@
   p.mission {
     width: 50%;
     margin: 0 auto 50px;
+  }
+}
+
+#exec_showcase_title {
+  background-color: $cc-red;
+  padding: 30px 0;
+
+  h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: white;
+    font-weight: 300;
+  }
+}
+
+#exec_showcase {
+  overflow: auto;
+  padding-top: 20px;
+
+  .exec-box {
+    width: 33%;
+    box-sizing: border-box;
+    float: left;
+    height: 200px;
+    text-align: center;
+    padding-top: 20px;
+
+    border-left: 1px #dddddd solid;
+    border-right: 1px #dddddd solid;
+
+    &:nth-child(3n+1) {
+      border-left: 2px #dddddd solid;
+    }
+
+    &:nth-child(3n) {
+      border-right: 2px #dddddd solid;
+    }
+
+    img {
+    }
+
+    .nameline {
+      .name {
+      }
+
+      .position {
+        color: $cc-red;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .exec-box.odd {
+    // background-color: $cc-red;
+  }
+
+  .exec-box.even {
+    // background-color: #dddddd;
   }
 }
 

@@ -7,3 +7,23 @@
     <p>Learn More</p>
   </div>
 </div>
+
+<!-- Exec showcase -->
+<div id="exec_showcase_title">
+  <h2>Our Exec Board</h2>
+</div>
+<div class="container" id="exec_showcase">
+  <!-- <h2>Our Exec Board</h2> -->
+  <% 0.upto(@exec_board.size - 1) do |i| %>
+    <% is_empty = @exec_board[i][:name].nil? %>
+    <div class="exec-box <%= 'placeholder' if is_empty %>">
+      <% unless is_empty %>
+        <img src="http://fakeimg.pl/120/">
+        <p class="nameline">
+          <span class="name"><%= @exec_board[i][:name] %></span>,
+          <span class="position"><%= @exec_board[i][:position] %></span>
+        </p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
