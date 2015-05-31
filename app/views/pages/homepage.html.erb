@@ -18,7 +18,7 @@
     <% is_empty = @exec_board[i][:name].nil? %>
     <div class="exec-box <%= 'placeholder' if is_empty %>">
       <% unless is_empty %>
-        <img src="http://fakeimg.pl/120/">
+        <img src="http://fakeimg.pl/150x200/">
         <p class="nameline">
           <span class="name"><%= @exec_board[i][:name] %></span>,
           <span class="position"><%= @exec_board[i][:position] %></span>
