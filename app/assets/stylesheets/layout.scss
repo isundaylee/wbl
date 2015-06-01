@@ -39,7 +39,7 @@ nav {
   right: 0;
   color: #aaaaaa;
 
-  ul {
+  > ul {
     li {
       list-style-type: none;
       text-decoration: none;
@@ -51,6 +51,18 @@ nav {
         background-color: $cc-red-dark;
       }
 
+      &.active {
+        a {
+          border-bottom: 2px #ffffff solid;
+        }
+      }
+
+      &:hover.active {
+        a {
+          border-bottom: none;
+        }
+      }
+
       a {
         -webkit-text-size-adjust: 100%;
         font-size: 1em;
@@ -60,9 +72,30 @@ nav {
       }
     }
 
-    li.active {
-      a {
-        border-bottom: 2px #ffffff solid;
+    li:hover ul.dropdown {
+      z-index: 1;
+    }
+
+    ul.dropdown {
+      z-index: -1;
+
+      position: absolute;
+      top: 100%;
+      left: 5px;
+      margin-top: -10px;
+
+      li {
+        background-color: $cc-red-dark;
+        display: block;
+        margin: 0;
+
+        &:hover {
+          background-color: white;
+
+          a {
+            color: $cc-red;
+          }
+        }
       }
     }
   }
