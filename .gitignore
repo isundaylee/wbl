@@ -19,3 +19,6 @@
 
 # added by GitSavvy
 /config/database.yml
+
+# Assets
+/public/assets
