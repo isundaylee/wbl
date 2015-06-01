@@ -49,3 +49,9 @@ gem 'rails_12factor', group: :production
 
 # Puma server
 gem 'puma'
+
+# Paperclip
+gem 'paperclip'
+
+# RailsAdmin
+gem 'rails_admin'
