@@ -1,36 +1,10 @@
 class PagesController < ApplicationController
   def homepage
-    @exec_board = [
-      {
-        name: 'Carolyn Chang',
-        position: 'Co-President'
-      },
-      {
-        name: 'Jenny  Lohmeier',
-        position: 'Co-President'
-      },
-      {
-        name: 'Tanya Talkar',
-        position: 'VP Internal Relations'
-      },
-      {
-        name: 'Angela Cui',
-        position: 'VP Corporate Relations'
-      },
-      {
-        name: 'Fiona Lam',
-        position: 'VP Finance'
-      },
-      {
-        name: 'Uma Girkar',
-        position: 'VP Operations'
-      },
-      {},
-      {
-        name: 'Sylvia Atsaves',
-        position: 'VP Marketing'
-      },
-      {}
-    ]
+    @exec_board = Member.exec.to_a
+
+    # Center the last one in case of 3n+1
+    if @exec_board.size % 3 == 1
+      @exec_board = @exec_board[0...-1] + [nil, @exec_board[-1], nil]
+    end
   end
 end

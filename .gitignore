@@ -22,3 +22,6 @@
 
 # Assets
 /public/assets
+
+# added by GitSavvy
+/public/system/
