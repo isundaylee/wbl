@@ -16,3 +16,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# added by GitSavvy
+/config/database.yml
