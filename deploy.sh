@@ -15,7 +15,7 @@ fi
 
 if [ -n "$SCHEMA_CHANGE" ]; then
     echo 'Schema changed. Running "bundle exec rake db:migrate". '
-    ssh rails@wbl 'cd app && bundle exec rake db:migrate"'
+    ssh rails@wbl 'cd app && bundle exec rake db:migrate'
 fi
 
 if [ -n "$ASSETS_CHANGE" ]; then
