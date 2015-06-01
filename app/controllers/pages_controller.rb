@@ -7,4 +7,8 @@ class PagesController < ApplicationController
       @exec_board = @exec_board[0...-1] + [nil, @exec_board[-1], nil]
     end
   end
+
+  def posts
+    render "pages/posts/#{params[:name]}"
+  end
 end

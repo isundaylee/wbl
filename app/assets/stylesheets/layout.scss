@@ -73,12 +73,12 @@ nav {
     }
 
     li:hover ul.dropdown {
-      z-index: 1;
+      display: block;
     }
 
     ul.dropdown {
-      z-index: -1;
-
+      display: none;
+      z-index: 1;
       position: absolute;
       top: 100%;
       left: 5px;
