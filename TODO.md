@@ -1,9 +1,9 @@
-- [*] About Us
-    - [*] Introduction
-    - [*] Letter from the Presidents
+- [x] About Us
+    - [x] Introduction
+    - [x] Letter from the Presidents
 - [ ] Leadership
     - [ ] Organization Chart
-    - [*] Executive Board
+    - [x] Executive Board
     - [ ] General Board
         - Corporate Relations Department
         - Internal Relations Department
@@ -24,4 +24,4 @@
     - Board Retreat - April 2014
 - [ ] Sponsors
 - [ ] Alumnae
-- [*] Contact Us
+- [x] Contact Us
