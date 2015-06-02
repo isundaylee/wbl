@@ -9,25 +9,8 @@
 </div>
 
 <!-- Exec showcase -->
-<div class="subtitle" id="exec_showcase_title">
+<div class="subtitle">
   <h2>Our Exec Board</h2>
 </div>
-<div class="container" id="exec_showcase">
-  <!-- <h2>Our Exec Board</h2> -->
-  <% @exec_board.each do |e| %>
-    <% is_empty = e.try(:name).nil? %>
-    <div class="exec-box <%= 'placeholder' if is_empty %>">
-      <% unless is_empty %>
-        <% if e.portrait.exists? %>
-          <%= image_tag e.portrait.url %>
-        <% else %>
-          <img src="http://fakeimg.pl/150x200/">
-        <% end %>
-        <p class="nameline">
-          <span class="name"><%= e.name %></span>,
-          <span class="position"><%= e.title %></span>
-        </p>
-      <% end %>
-    </div>
-  <% end %>
-</div>
+
+<%= render 'member_showcase', members: @exec_board %>

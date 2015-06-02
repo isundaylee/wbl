@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#homepage'
 
+  get 'leadership' => 'pages#leadership', as: 'leadership'
   get 'posts/:name' => 'pages#posts', as: 'posts'
 
   # Example of regular route:

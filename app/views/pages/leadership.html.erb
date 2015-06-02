@@ -1,0 +1,15 @@
+<div id="postspan">
+  <%= image_tag 'postspan.png' %>
+</div>
+
+<div class="subtitle">
+  <h2>Our Exec Board</h2>
+</div>
+
+<%= render 'member_showcase', members: @exec_board %>
+
+<div class="subtitle">
+  <h2>Our General Board</h2>
+</div>
+
+<%= render 'member_showcase', members: @general_board %>
