@@ -10,6 +10,10 @@ class PagesController < ApplicationController
 
   def posts
     @name = params[:name].gsub('-', '_')
-    @template_name = "pages/posts/#{@name}"
+
+    post = Post.find_by(name: @name)
+    @content = post.content
+
+    # @template_name = "pages/posts/#{@name}"
   end
 end

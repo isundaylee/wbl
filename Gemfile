@@ -57,3 +57,4 @@ gem 'paperclip'
 gem 'rails_admin'
 
 # Dummy change
+gem 'quill-rails', '~> 0.1.0'

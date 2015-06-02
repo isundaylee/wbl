@@ -1,0 +1,51 @@
+<div class="quill-wrapper">
+ <div id="full-toolbar" class="toolbar">
+    <span class="ql-format-group">
+      <select title="Size" class="ql-size">
+        <option value="20px">Subhead</option>
+        <option value="13px" selected="">Normal</option>
+      </select>
+    </span>
+    <span class="ql-format-group">
+      <span title="Bold" class="ql-format-button ql-bold"></span>
+      <span class="ql-format-separator"></span>
+      <span title="Italic" class="ql-format-button ql-italic"></span>
+      <span class="ql-format-separator"></span>
+      <span title="Underline" class="ql-format-button ql-underline"></span>
+      <span class="ql-format-separator"></span>
+      <span title="Strikethrough" class="ql-format-button ql-strike"></span>
+    </span>
+    <span class="ql-format-group">
+      <span title="Bullet" class="ql-format-button ql-bullet"></span>
+    </span>
+    <span class="ql-format-group">
+      <span title="Link" class="ql-format-button ql-link"></span>
+    </span>
+  </div>
+  <div id="full-editor" class="editor ql-container"><%= field.form_value.try(:html_safe) %></div>
+  <input type='hidden' name="<%= "#{field.abstract_model.model_name.downcase}[#{field.method_name}]" %>" id="<%= "quill_#{field.method_name}" %>" value=''/>
+
+  <script type='text/javascript'>
+    (function() {
+      // Initialize editor with custom theme and modules
+      function copyToInput() {
+        document.getElementById('<%= "quill_#{field.method_name}" %>').value = fullEditor.getHTML()
+      }
+
+      var fullEditor = new Quill('#full-editor', {
+        modules: {
+          'toolbar': { container: '#full-toolbar' },
+          'link-tooltip': true
+        },
+        theme: 'snow'
+      });
+
+      fullEditor.on('text-change', function(delta, source) {
+        copyToInput()
+      });
+
+      copyToInput()
+    })()
+  </script>
+</div>
+
