@@ -40,6 +40,10 @@ nav {
   color: #aaaaaa;
 
   > ul {
+    > li {
+      position: relative;
+    }
+
     li {
       list-style-type: none;
       text-decoration: none;
@@ -81,8 +85,9 @@ nav {
       z-index: 1;
       position: absolute;
       top: 100%;
-      left: 5px;
-      margin-top: -10px;
+      left: 0;
+      padding-left: 0;
+      width: 250px;
 
       li {
         background-color: $cc-red-dark;
