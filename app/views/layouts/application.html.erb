@@ -15,7 +15,9 @@
 <body>
   <header>
     <div class="container">
-      <%= image_tag 'logo.png', id: 'logo' %>
+      <%= link_to root_path do %>
+        <%= image_tag 'logo.png', id: 'logo' %>
+      <% end %>
       <nav>
         <ul>
           <li>
