@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   end
 
   def posts
-    render "pages/posts/#{params[:name]}"
+    @name = params[:name].gsub('-', '_')
+    @template_name = "pages/posts/#{@name}"
   end
 end
