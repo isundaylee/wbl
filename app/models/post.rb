@@ -8,6 +8,10 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def display_html
+    return PostContentParser.new(self.content).parse!
+  end
+
   private
 
     def normalize_name

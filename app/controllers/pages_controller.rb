@@ -12,8 +12,14 @@ class PagesController < ApplicationController
     @name = params[:name].gsub('-', '_')
 
     post = Post.find_by(name: @name)
-    @content = post.content
 
-    # @template_name = "pages/posts/#{@name}"
+    if post
+      @content = post.display_html
+    else
+      @content = [
+        '<div class="subtitle"><h2>Oops</h2></div>',
+        '<div class="container post-container"><p>You need to create a post with name "' + @name + '". </p></div>'
+      ].join.html_safe
+    end
   end
 end
