@@ -20,30 +20,13 @@
       <% end %>
       <nav>
         <ul>
-          <li>
-            <a href="<%= posts_path 'about-us' %>">Abous Us</a>
-
-<!--             <ul class="dropdown">
-              <li><a href="#">Introduction</a></li>
-              <li><a href="#">Letter from the Presidents</a></li>
-              <li><a href="#">Mission Statement</a></li>
-              <li><a href="#">The Executive Board</a></li>
-              <li><a href="#">The General Board</a></li>
-            </ul> -->
-          </li>
-          <li class="active"><a href="<%= leadership_path %>">Leadership</a></li>
-          <li><a href="#">Membership</a></li>
-          <li><a href="#">Sponsors</a></li>
-          <li><a href="#">Alumni</a></li>
-          <li>
-            <a href="#">Events</a>
-
-            <ul class="dropdown">
-              <li><a href="#">Career Week 2014</a></li>
-              <li><a href="#">WBL Board Retreat 4.4.14</a></li>
-            </ul>
-          </li>
-          <li><a href="<%= posts_path 'contact-us' %>">Contact Us</a></li>
+          <%= nav_item 'About Us', posts_path('about-us'), @nav_path == '/posts/about-us' %>
+          <%= nav_item 'Leadership', leadership_path, @nav_path == '/leadership' %>
+          <%= nav_item 'Events', '#', @nav_path =~ /^\/events/ do %>
+            <%= nav_item 'Career Week 2014', '#', false %>
+            <%= nav_item 'WBL Board Retreat 4.4.14', '#', false %>
+          <% end %>
+          <%= nav_item 'Contact Us', posts_path('contact-us'), @nav_path == '/posts/contact-us' %>
         </ul>
       </nav>
     </div>

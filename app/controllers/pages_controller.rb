@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   def homepage
+    @nav_path = "/"
+
     @exec_board = Member.exec.to_a
 
     # Center the last one in case of 3n+1
@@ -9,6 +11,8 @@ class PagesController < ApplicationController
   end
 
   def leadership
+    @nav_path = "/leadership"
+
     @exec_board = Member.exec.to_a
     @general_board = Member.all.to_a # For now
 
@@ -24,6 +28,7 @@ class PagesController < ApplicationController
 
   def posts
     @name = params[:name].gsub('-', '_')
+    @nav_path = "/posts/#{params[:name]}"
 
     post = Post.find_by(name: @name)
 
