@@ -1,1 +1,15 @@
 @import 'quill.snow';
+
+.quill-wrapper {
+  border: 1px #aaaaaa solid;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+}
+
+#full-editor {
+  height: 500px;
+}
+
+#full-toolbar {
+  border-bottom: 1px #aaaaaa solid;
+}
