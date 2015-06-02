@@ -1,0 +1,27 @@
+- [*] About Us
+    - [*] Introduction
+    - [*] Letter from the Presidents
+- [ ] Leadership
+    - [ ] Organization Chart
+    - [*] Executive Board
+    - [ ] General Board
+        - Corporate Relations Department
+        - Internal Relations Department
+        - Marketing Department
+        - Operations Department
+- [ ] Membership
+    - [ ] Member Involvement
+        - Education Series
+        - Industry Focus Groups
+        - Internal Networking
+        - External Networking
+    - [ ] Club Digests
+- [ ] Calendar
+- [ ] Events
+    - Career Week - September 2015
+    - Board Retreat - April 2015
+    - Career Week - September 2014
+    - Board Retreat - April 2014
+- [ ] Sponsors
+- [ ] Alumnae
+- [*] Contact Us
