@@ -17,7 +17,7 @@
         - External Networking
     - [ ] Club Digests
 - [ ] Calendar
-- [ ] Events
+- [x] Events
     - Career Week - September 2015
     - Board Retreat - April 2015
     - Career Week - September 2014
