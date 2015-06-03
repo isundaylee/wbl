@@ -186,3 +186,32 @@
   }
 }
 
+// Events page
+
+#event_images {
+  overflow: auto;
+  padding: 0;
+
+  .event-img {
+    width: 31%;
+    margin-left: 3.5%;
+    margin-bottom: 3.5%;
+    display: block;
+    float: left;
+
+    img {
+      display: block;
+      width: 100%;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &:nth-child(3n+1) {
+      margin-left: 0;
+    }
+  }
+
+}
+

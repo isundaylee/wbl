@@ -9,3 +9,11 @@
 <div class="container post-container">
   <p><%= @event.description %></p>
 </div>
+
+<div class="container" id="event_images">
+  <% @event.images.each do |i| %>
+    <%= link_to i.content.url, target: '_blank', class: 'event-img' do %>
+      <%= image_tag i.content.url(:thumb) %>
+    <% end %>
+  <% end %>
+</div>

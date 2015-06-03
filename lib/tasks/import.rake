@@ -24,6 +24,18 @@ namespace :import do
       title = events[url]
 
       event = Event.find_or_create_by(title: title)
+      doc = Nokogiri::HTML(open(url).read)
+
+      event.images.destroy_all
+
+      doc.css('.attachment-thumbnail').each do |i|
+        img_url = i['src']
+        orig_url = img_url.gsub('-150x150', '')
+
+        event.images.create(content: open(orig_url))
+
+        puts '  Image "' + orig_url + '" added. '
+      end
 
       puts 'Event "' + title + '" imported. '
     end
