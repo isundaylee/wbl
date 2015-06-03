@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get 'leadership' => 'pages#leadership', as: 'leadership'
   get 'posts/:name' => 'pages#posts', as: 'posts'
+  get 'events/:slug' => 'pages#events', as: 'events'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

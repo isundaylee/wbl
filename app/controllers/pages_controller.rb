@@ -41,4 +41,8 @@ class PagesController < ApplicationController
       ].join.html_safe
     end
   end
+
+  def events
+    @event = Event.friendly.find(params[:slug])
+  end
 end

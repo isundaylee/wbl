@@ -23,8 +23,9 @@
           <%= nav_item 'About Us', posts_path('about-us'), @nav_path == '/posts/about-us' %>
           <%= nav_item 'Leadership', leadership_path, @nav_path == '/leadership' %>
           <%= nav_item 'Events', '#', @nav_path =~ /^\/events/ do %>
-            <%= nav_item 'Career Week 2014', '#', false %>
-            <%= nav_item 'WBL Board Retreat 4.4.14', '#', false %>
+            <% Event.find_each do |e| %>
+              <%= nav_item e.title, events_path(e.slug), false %>
+            <% end %>
           <% end %>
           <%= nav_item 'Contact Us', posts_path('contact-us'), @nav_path == '/posts/contact-us' %>
         </ul>

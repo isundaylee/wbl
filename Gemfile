@@ -60,3 +60,6 @@ gem 'rails_admin'
 gem 'quill-rails', '~> 0.1.0'
 
 gem 'nokogiri'
+
+# Slug id
+gem 'friendly_id', '~> 5.1.0'
