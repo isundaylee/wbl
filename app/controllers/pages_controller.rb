@@ -43,6 +43,8 @@ class PagesController < ApplicationController
   end
 
   def events
+    @nav_path = '/events/' + params[:slug]
+
     @event = Event.friendly.find(params[:slug])
   end
 end
