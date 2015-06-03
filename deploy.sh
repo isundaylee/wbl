@@ -2,6 +2,7 @@
 
 PREV_HASH=`ssh rails@wbl "cd app && git rev-parse HEAD"`
 
+ssh rails@wbl 'cd app && git checkout Gemfile.lock'
 ssh rails@wbl 'cd app && git pull'
 
 GEMFILE_CHANGE=`ssh rails@wbl "cd app && git diff --name-only $PREV_HASH HEAD -- Gemfile.lock"`
