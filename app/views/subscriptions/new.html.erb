@@ -1,0 +1,17 @@
+<div class="pagespan" id="subscribespan">
+  <%= image_tag 'subscribe.jpg' %>
+  <div class="overlay">
+    <h1>Subscribe</h1>
+    <p class="description"><%= flash[:success] || "Subscribe to our mailing list to find out about future events" %></p>
+
+    <p class="errors"><%= @error || "&nbsp; ".html_safe %></p>
+
+    <%= form_for @subscription do |f| %>
+      <%= f.text_field :name, placeholder: 'Your name. '%>
+      <%= f.text_field :email, placeholder: 'Your email address. ' %>
+      <%= f.select :year, Subscription.year_options %>
+
+      <%= f.submit 'Subscribe' %>
+    <% end %>
+  </div>
+</div>

@@ -21,14 +21,14 @@
 // Homepage related css
 
 
-#intro_span {
+.pagespan {
   position: relative;
   overflow: hidden;
   padding: 0;
   margin: 0;
 
   // The image
-  #homespan {
+  img {
     // width: 140%;
     // margin-left: -18%;
     width: 100%;
@@ -37,7 +37,7 @@
     display: block;
   }
 
-  #intro_overlay {
+  .overlay {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -45,7 +45,9 @@
     top: 0;
     left: 0;
   }
+}
 
+#homespan {
   h1 {
     color: white;
     text-align: center;
@@ -214,4 +216,3 @@
   }
 
 }
-

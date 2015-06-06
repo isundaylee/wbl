@@ -47,4 +47,5 @@ class PagesController < ApplicationController
 
     @event = Event.friendly.find(params[:slug])
   end
+
 end

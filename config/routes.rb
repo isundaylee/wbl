@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'posts/:name' => 'pages#posts', as: 'posts'
   get 'events/:slug' => 'pages#events', as: 'events'
 
+  resources :subscriptions, only: [:new, :create]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -63,3 +63,5 @@ gem 'nokogiri'
 
 # Slug id
 gem 'friendly_id', '~> 5.1.0'
+
+gem 'email_validator'
