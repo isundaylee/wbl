@@ -25,4 +25,4 @@
 - [ ] Sponsors
 - [ ] Alumnae
 - [x] Contact Us
-- [ ] Subscription
+- [x] Subscription
