@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root 'pages#homepage'
 
   get 'leadership' => 'pages#leadership', as: 'leadership'
+  get 'calendar' => 'calendar#show', as: 'calendar'
+  get 'calendar_embed' => 'calendar#embed', as: 'calendar_embed'
   get 'posts/:name' => 'pages#posts', as: 'posts'
   get 'events/:slug' => 'pages#events', as: 'events'
 

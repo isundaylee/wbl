@@ -22,6 +22,7 @@
         <ul>
           <%= nav_item 'About Us', posts_path('about-us'), @nav_path == '/posts/about-us' %>
           <%= nav_item 'Leadership', leadership_path, @nav_path == '/leadership' %>
+          <%= nav_item 'Calendar', calendar_path, @nav_path == '/calendar' %>
           <%= nav_item 'Events', '#', @nav_path =~ /^\/events/ do %>
             <% Event.find_each do |e| %>
               <%= nav_item e.title, events_path(e.slug), false %>

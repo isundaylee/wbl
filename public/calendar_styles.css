@@ -1,0 +1,89 @@
+#calendarTitle {
+  display: none;
+}
+
+#container {
+  width: 80%;
+  max-width: 1200px !important;
+  height: 600px !important;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-table {
+  display: none;
+}
+
+.view-container-border, .view-cap {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.subscribe-image {
+  display: none;
+}
+
+.month-row table:first-child td,
+.month-row table:last-child tr:first-child td {
+  border-left: 1px solid #810200;
+  border-right: 1px solid #810200;
+  border-top: 2px solid #810200;
+  background-color: #fff;
+}
+
+.month-row table:first-child td:first-child,
+.month-row table:last-child tr:first-child td:first-child {
+  border-left: 2px solid #810200;
+}
+
+.month-row table:first-child td:last-child,
+.month-row table:last-child tr:first-child td:last-child {
+  border-right: 2px solid #810200;
+}
+
+.month-row:last-child table:first-child td {
+  border-bottom: 2px solid #810200;
+}
+
+.month-row table:last-child tr:first-child td span {
+  float: left;
+  text-align: left;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  color: #810200;
+}
+
+.mv-daynames-table {
+  display: none;
+}
+
+.mv-event-container {
+  border: none;
+}
+
+.te-t {
+  display: none;
+}
+
+.te-s {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 12px;
+  padding: 0 8px;
+  white-space: initial;
+  display: inline-block;
+  font-weight: 500;
+  color: black;
+}
+
+.st-bg-today {
+  background-color: #fff;
+}
+
+.st-dtitle-today {
+  border: none;
+}
+
+#timezone {
+  display: none;
+}
