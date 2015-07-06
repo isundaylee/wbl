@@ -28,6 +28,7 @@ class CalendarController < ApplicationController
   end
 
   def show
+    @nav_path = '/events/calendar'
   end
 
 end
