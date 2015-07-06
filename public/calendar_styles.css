@@ -87,3 +87,19 @@
 #timezone {
   display: none;
 }
+
+.month {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fa {
+  margin: 0 30px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}

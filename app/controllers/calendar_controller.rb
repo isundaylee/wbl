@@ -12,6 +12,11 @@ class CalendarController < ApplicationController
     '/calendar_styles.css'
   ]
 
+  JS_FILES = [
+    'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js',
+    '/calendar_tweaks.js'
+  ]
+
   def embed
     page = Nokogiri::HTML(open(SOURCE).read)
 
@@ -22,6 +27,13 @@ class CalendarController < ApplicationController
       css_node['href'] = c
 
       page.at_css('head').last_element_child.after(css_node)
+    end
+
+    JS_FILES.each do |j|
+      js_node = Nokogiri::XML::Node.new('script', page)
+      js_node['src'] = j
+
+      page.at_css('head').last_element_child.after(js_node)
     end
 
     render inline: page.to_s

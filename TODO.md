@@ -16,7 +16,7 @@
         - Internal Networking
         - External Networking
     - [ ] Club Digests
-- [ ] Calendar
+- [x] Calendar
 - [x] Events
     - Career Week - September 2015
     - Board Retreat - April 2015
@@ -31,7 +31,7 @@
 
 Order
 -----
-- [ ] Finish up calendar (move to events subsection)
+- [x] Finish up calendar (move to events subsection)
 - [ ] General board
 - [ ] Image swapping
 - [ ] Org chart
