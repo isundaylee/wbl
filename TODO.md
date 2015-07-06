@@ -4,7 +4,7 @@
 - [ ] Leadership
     - [ ] Organization Chart
     - [x] Executive Board
-    - [ ] General Board
+    - [x] General Board
         - Corporate Relations Department
         - Internal Relations Department
         - Marketing Department
@@ -32,7 +32,7 @@
 Order
 -----
 - [x] Finish up calendar (move to events subsection)
-- [ ] General board
+- [x] General board
 - [ ] Image swapping
 - [ ] Org chart
 - [ ] Membership static

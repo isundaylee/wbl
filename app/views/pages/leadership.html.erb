@@ -12,4 +12,8 @@
   <h2>Our General Board</h2>
 </div>
 
-<%= render 'member_showcase', members: @general_board %>
+<% Department.find_each do |d| %>
+  <h3><%= d.name %></h3>
+
+  <%= render 'member_showcase', members: d.members %>
+<% end %>
