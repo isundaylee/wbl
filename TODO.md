@@ -26,3 +26,23 @@
 - [ ] Alumnae
 - [x] Contact Us
 - [x] Subscription
+- [ ] Miscellaneous
+    - [ ] Secure the backend
+
+Order
+-----
+- [ ] Finish up calendar (move to events subsection)
+- [ ] General board
+- [ ] Image swapping
+- [ ] Org chart
+- [ ] Membership static
+- [ ] Club Digests
+- [ ] Sponsors
+- [ ] Alumnae
+- [ ] Email IS&T about domain
+
+Picture Spots
+-------------
+- Homepage
+- 5 sections (About Us, Leadership, Sponsors, Alumnae, Events, Contact Us)
+- Org chart
