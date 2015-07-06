@@ -27,8 +27,14 @@ class PagesController < ApplicationController
   end
 
   def posts
+    asset_map = {
+      'about_us' => 'about_us',
+      'contact_us' => 'contact_us',
+    }
+
     @name = params[:name].gsub('-', '_')
     @nav_path = "/posts/#{params[:name]}"
+    @asset_name = asset_map[@name]
 
     post = Post.find_by(name: @name)
 
