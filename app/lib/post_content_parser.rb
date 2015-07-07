@@ -1,6 +1,7 @@
 class PostContentParser
 
   TEMPLATE_SUBHEAD = '<div class="subtitle"><h2>%s</h2></div>'
+  TEMPLATE_SECTION_HEAD = '<h3>%s</h3>'
   TEMPLATE_PARAGRAPH = '<p>%s</p>'
   TEMPLATE_CONTAINER_BEGIN = '<div class="container post-container">'
   TEMPLATE_CONTAINER_END = '</div>'
@@ -45,10 +46,17 @@ class PostContentParser
 
   def process_node(node)
     # Looking for 'subheads', i.e., <span>s with font size 20px
+    # and 'section heads', i.e., <span>s with font size 16px
     node.css('span').each do |s|
       if /20px/ =~ s['style']
         ensure_not_in_container
         @output << TEMPLATE_SUBHEAD % s.content
+        return
+      end
+
+      if /16px/ =~ s['style']
+        ensure_not_in_container
+        @output << TEMPLATE_SECTION_HEAD % s.content
         return
       end
     end

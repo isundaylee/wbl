@@ -30,7 +30,8 @@ class PagesController < ApplicationController
     asset_map = {
       'about_us' => 'about_us',
       'contact_us' => 'contact_us',
-      'org_chart' => 'leadership'
+      'org_chart' => 'leadership',
+      'member_involvement' => 'membership'
     }
 
     appendix_map = {

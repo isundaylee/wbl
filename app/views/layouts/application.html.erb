@@ -25,6 +25,9 @@
             <%= nav_item 'Board Members', leadership_path, false %>
             <%= nav_item 'Org Chart', posts_path('org-chart'), false %>
           <% end %>
+          <%= nav_item 'Membership', posts_path('member-involvement'), @nav_path == '/membership' do %>
+            <%= nav_item 'Member Involvement', posts_path('member-involvement'), false %>
+          <% end %>
           <%= nav_item 'Events', calendar_path, @nav_path =~ /^\/events/ do %>
             <%= nav_item 'Calendar', calendar_path, false %>
             <% Event.find_each do |e| %>

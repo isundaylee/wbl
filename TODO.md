@@ -10,7 +10,7 @@
         - Marketing Department
         - Operations Department
 - [ ] Membership
-    - [ ] Member Involvement
+    - [x] Member Involvement
         - Education Series
         - Industry Focus Groups
         - Internal Networking
@@ -35,7 +35,7 @@ Order
 - [x] General board
 - [x] Image swapping
 - [x] Org chart
-- [ ] Membership static
+- [x] Membership static
 - [ ] Club Digests
 - [ ] Sponsors
 - [ ] Alumnae
