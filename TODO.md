@@ -33,7 +33,7 @@ Order
 -----
 - [x] Finish up calendar (move to events subsection)
 - [x] General board
-- [ ] Image swapping
+- [x] Image swapping
 - [ ] Org chart
 - [ ] Membership static
 - [ ] Club Digests
