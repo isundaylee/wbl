@@ -21,7 +21,10 @@
       <nav>
         <ul>
           <%= nav_item 'About Us', posts_path('about-us'), @nav_path == '/posts/about-us' %>
-          <%= nav_item 'Leadership', leadership_path, @nav_path == '/leadership' %>
+          <%= nav_item 'Leadership', leadership_path, @nav_path == '/leadership' do %>
+            <%= nav_item 'Board Members', leadership_path, false %>
+            <%= nav_item 'Org Chart', posts_path('org-chart'), false %>
+          <% end %>
           <%= nav_item 'Events', calendar_path, @nav_path =~ /^\/events/ do %>
             <%= nav_item 'Calendar', calendar_path, false %>
             <% Event.find_each do |e| %>

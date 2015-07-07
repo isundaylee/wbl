@@ -30,11 +30,17 @@ class PagesController < ApplicationController
     asset_map = {
       'about_us' => 'about_us',
       'contact_us' => 'contact_us',
+      'org_chart' => 'leadership'
+    }
+
+    appendix_map = {
+      'org_chart' => 'org_chart'
     }
 
     @name = params[:name].gsub('-', '_')
     @nav_path = "/posts/#{params[:name]}"
     @asset_name = asset_map[@name]
+    @appendix = appendix_map[@name]
 
     post = Post.find_by(name: @name)
 

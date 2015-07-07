@@ -1,8 +1,8 @@
 - [x] About Us
     - [x] Introduction
     - [x] Letter from the Presidents
-- [ ] Leadership
-    - [ ] Organization Chart
+- [x] Leadership
+    - [x] Organization Chart
     - [x] Executive Board
     - [x] General Board
         - Corporate Relations Department
@@ -34,7 +34,7 @@ Order
 - [x] Finish up calendar (move to events subsection)
 - [x] General board
 - [x] Image swapping
-- [ ] Org chart
+- [x] Org chart
 - [ ] Membership static
 - [ ] Club Digests
 - [ ] Sponsors

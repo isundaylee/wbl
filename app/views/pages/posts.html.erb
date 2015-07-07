@@ -4,3 +4,7 @@
 
 
 <%= @content %>
+
+<% if @appendix %>
+  <%= render "pages/appendices/" + @appendix %>
+<% end %>
