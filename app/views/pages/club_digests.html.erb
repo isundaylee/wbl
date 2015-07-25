@@ -1,0 +1,15 @@
+<div id="postspan">
+  <%= image_tag Asset.url_for('membership') %>
+</div>
+
+<div class="subtitle">
+  <h2>Club Digests</h2>
+</div>
+
+<div class="container post-container">
+  <ul>
+    <% ClubDigest.all.each do |c| %>
+      <li><a href="<%= c.file.url %>">WBL Digest Vol. <%= c.volume %> No. <%= c.number %></a></li>
+    <% end %>
+  </ul>
+</div>

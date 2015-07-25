@@ -40,4 +40,31 @@ namespace :import do
       puts 'Event "' + title + '" imported. '
     end
   end
+
+  task digests: :environment do
+    index_url = 'http://wbl.mit.edu/?page_id=634'
+    regex = /WBL Digest Vol (.*) No (.*)/
+
+    doc = Nokogiri::HTML(open(index_url).read)
+
+    doc.css('.entry-content a').each do |a|
+      url = a['href']
+      match = regex.match(a.text)
+      page = Nokogiri::HTML(open(url).read)
+
+      page.css('a').each do |a|
+        next unless a['href'] =~ /\.pdf$/
+        ClubDigest.create!(
+          volume: match[1].to_i,
+          number: match[2].to_i,
+          file: URI.parse(a['href'])
+        )
+
+        puts a['href']
+        break
+      end
+
+      puts a.text
+    end
+  end
 end

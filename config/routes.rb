@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'calendar_embed' => 'calendar#embed', as: 'calendar_embed'
   get 'posts/:name' => 'pages#posts', as: 'posts'
   get 'events/:slug' => 'pages#events', as: 'events'
+  get 'club_digests' => 'pages#club_digests', as: 'club_digests'
 
   resources :subscriptions, only: [:new, :create]
 

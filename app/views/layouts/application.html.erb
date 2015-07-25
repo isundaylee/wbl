@@ -27,6 +27,7 @@
           <% end %>
           <%= nav_item 'Membership', posts_path('member-involvement'), @nav_path == '/membership' do %>
             <%= nav_item 'Member Involvement', posts_path('member-involvement'), false %>
+            <%= nav_item 'Club Digests', club_digests_path, false %>
           <% end %>
           <%= nav_item 'Events', calendar_path, @nav_path =~ /^\/events/ do %>
             <%= nav_item 'Calendar', calendar_path, false %>

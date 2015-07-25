@@ -61,4 +61,8 @@ class PagesController < ApplicationController
     @event = Event.friendly.find(params[:slug])
   end
 
+  def club_digests
+    @nav_path = '/club-digests'
+  end
+
 end
