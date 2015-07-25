@@ -9,13 +9,13 @@
         - Internal Relations Department
         - Marketing Department
         - Operations Department
-- [ ] Membership
+- [x] Membership
     - [x] Member Involvement
         - Education Series
         - Industry Focus Groups
         - Internal Networking
         - External Networking
-    - [ ] Club Digests
+    - [x] Club Digests
 - [x] Calendar
 - [x] Events
     - Career Week - September 2015
@@ -36,7 +36,7 @@ Order
 - [x] Image swapping
 - [x] Org chart
 - [x] Membership static
-- [ ] Club Digests
+- [x] Club Digests
 - [ ] Sponsors
 - [ ] Alumnae
 - [ ] Email IS&T about domain
