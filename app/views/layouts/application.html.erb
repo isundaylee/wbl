@@ -35,6 +35,7 @@
               <%= nav_item e.title, events_path(e.slug), false %>
             <% end %>
           <% end %>
+          <%= nav_item 'Sponsors', sponsors_path, @nav_path == '/sponsors' %>
           <%= nav_item 'Contact Us', posts_path('contact-us'), @nav_path == '/posts/contact-us' %>
         </ul>
       </nav>

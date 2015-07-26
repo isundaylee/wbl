@@ -1,18 +1,27 @@
+<% members = members.to_a %>
+<% if members.size % 3 == 1 %>
+  <% members = members[0...-1] + [nil, members[-1], nil] %>
+<% end %>
+<% members << nil while members.size % 3 != 0 %>
+
 <div class="container member-showcase">
   <!-- <h2>Our Exec Board</h2> -->
   <% members.each do |e| %>
-    <% is_empty = e.try(:name).nil? %>
+    <% is_empty = (e == nil) %>
     <div class="exec-box <%= 'placeholder' if is_empty %>">
       <% unless is_empty %>
-        <% if e.portrait.exists? %>
-          <%= image_tag e.portrait.url %>
+        <% portrait = e.portrait rescue e.logo %>
+        <% if portrait.exists? %>
+          <%= image_tag portrait.url %>
         <% else %>
-          <img src="http://fakeimg.pl/150x200/">
+          <img src="http://fakeimg.pl/150x200/" class="portrait_<%= e.class.name.downcase %>">
         <% end %>
-        <p class="nameline">
-          <span class="name"><%= e.name %></span>,
-          <span class="position"><%= e.title %></span>
-        </p>
+        <% if e.is_a?(Member) %>
+          <p class="nameline">
+            <span class="name"><%= e.name %></span>,
+            <span class="position"><%= e.title %></span>
+          </p>
+        <% end %>
       <% end %>
     </div>
   <% end %>

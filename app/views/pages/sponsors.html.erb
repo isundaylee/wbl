@@ -1,0 +1,18 @@
+<div id="postspan">
+  <%= image_tag Asset.url_for('sponsor') %>
+</div>
+
+<div class="subtitle">
+  <h2>Our Sponsors</h2>
+</div>
+
+<h3>Platinum</h3>
+<%= render 'member_showcase', members: Sponsor.platinum.all %>
+
+<h3>Gold</h3>
+<%= render 'member_showcase', members: Sponsor.gold.all %>
+
+<h3>Silver</h3>
+<%= render 'member_showcase', members: Sponsor.silver.all %>
+
+

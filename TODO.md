@@ -22,7 +22,7 @@
     - Board Retreat - April 2015
     - Career Week - September 2014
     - Board Retreat - April 2014
-- [ ] Sponsors
+- [x] Sponsors
 - [ ] Alumnae
 - [x] Contact Us
 - [x] Subscription
@@ -37,7 +37,7 @@ Order
 - [x] Org chart
 - [x] Membership static
 - [x] Club Digests
-- [ ] Sponsors
+- [x] Sponsors
 - [ ] Alumnae
 - [ ] Email IS&T about domain
 
