@@ -23,7 +23,7 @@
     - Career Week - September 2014
     - Board Retreat - April 2014
 - [x] Sponsors
-- [ ] Alumnae
+- [x] Alumnae
 - [x] Contact Us
 - [x] Subscription
 - [ ] Miscellaneous
@@ -38,7 +38,7 @@ Order
 - [x] Membership static
 - [x] Club Digests
 - [x] Sponsors
-- [ ] Alumnae
+- [x] Alumnae
 - [ ] Email IS&T about domain
 
 Picture Spots

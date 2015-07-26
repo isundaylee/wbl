@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'events/:slug' => 'pages#events', as: 'events'
   get 'club_digests' => 'pages#club_digests', as: 'club_digests'
   get 'sponsors' => 'pages#sponsors', as: 'sponsors'
+  get 'alumnae' => 'pages#alumnae', as: 'alumnae'
 
   resources :subscriptions, only: [:new, :create]
 

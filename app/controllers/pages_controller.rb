@@ -59,4 +59,8 @@ class PagesController < ApplicationController
     @nav_path = '/sponsors'
   end
 
+  def alumnae
+    @nav_path = '/alumnae'
+  end
+
 end

@@ -1,0 +1,20 @@
+<div id="postspan">
+  <%= image_tag Asset.url_for('alumnae') %>
+</div>
+
+<div class="subtitle">
+  <h2>Our Alumnae</h2>
+</div>
+
+<div class="container">
+  <% Alumna.all.each do |a| %>
+    <div class="alumna-entry">
+      <h3><%= a.name %></h3>
+      <p class="bio"><%= a.bio %></p>
+
+      <% if a.portrait.exists? %>
+        <%= image_tag a.portrait.url(:normal) %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
