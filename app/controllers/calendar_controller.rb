@@ -2,7 +2,7 @@ class CalendarController < ApplicationController
 
   include ActionView::Helpers::UrlHelper
 
-  SOURCE = "https://www.google.com/calendar/embed?src=pdighgf028nmbjbrno8oed8vsg@group.calendar.google.com"
+  SOURCE = "https://www.google.com/calendar/embed?src=81ur66f3bvpnmkkora9mcm8gjo%40group.calendar.google.com&ctz=America/Los_Angeles"
 
   CSS_FILES = [
     'http://fonts.googleapis.com/css?family=Roboto:400,100,300',
