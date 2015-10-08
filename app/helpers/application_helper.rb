@@ -11,4 +11,8 @@ module ApplicationHelper
       concat dropdown
     end
   end
+
+  def make_paragraphs(text, html_options = {})
+    safe_join(text.lines.map { |l| l.presence && content_tag(:p, l, html_options) })
+  end
 end

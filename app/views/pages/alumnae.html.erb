@@ -10,11 +10,11 @@
   <% Alumna.all.each do |a| %>
     <div class="alumna-entry">
       <h3><%= a.name %></h3>
-      <p class="bio"><%= a.bio %></p>
-
       <% if a.portrait.exists? %>
         <%= image_tag a.portrait.url(:normal) %>
       <% end %>
+
+      <%= make_paragraphs a.bio, class: 'bio' %>
     </div>
   <% end %>
 </div>
