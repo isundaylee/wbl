@@ -9,6 +9,7 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.new(subscription_params)
 
     if @subscription.save
+      Notifier.send_subscription_notification(@subscription).deliver
       flash[:success] = "You have succesfully subscribed to our mailing list! "
       redirect_to new_subscription_path
     else
