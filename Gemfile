@@ -65,3 +65,5 @@ gem 'nokogiri'
 gem 'friendly_id', '~> 5.1.0'
 
 gem 'email_validator'
+
+gem 'sqlite3'
