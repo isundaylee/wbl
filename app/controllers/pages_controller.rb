@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   def homepage
     @nav_path = "/"
 
+    @presidents = Member.presidents.to_a
     @exec_board = Member.exec.to_a
 
     # Center the last one in case of 3n+1

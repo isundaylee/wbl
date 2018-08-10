@@ -7,11 +7,13 @@ class Member < ActiveRecord::Base
   validates_attachment_content_type :portrait, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
 
-  scope :exec, -> { where(exec: true) }
+  scope :presidents, -> { where(president: true) }
+  scope :exec, -> { where(exec: true).where(president: false) }
 
   rails_admin do
     field :name
     field :title
+    field :president
     field :exec
     field :portrait, :paperclip
     field :general_department

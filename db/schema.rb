@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150726000942) do
+ActiveRecord::Schema.define(version: 20180810033514) do
 
   create_table "alumnas", force: :cascade do |t|
     t.string   "name"
@@ -90,13 +90,14 @@ ActiveRecord::Schema.define(version: 20150726000942) do
     t.string   "name"
     t.string   "title"
     t.boolean  "exec"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.string   "portrait_file_name"
     t.string   "portrait_content_type"
     t.integer  "portrait_file_size"
     t.datetime "portrait_updated_at"
     t.integer  "general_department_id"
+    t.boolean  "president",             default: false
   end
 
   create_table "posts", force: :cascade do |t|
