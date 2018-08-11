@@ -1,10 +1,13 @@
 <% members = members.to_a %>
+<% two_column = (members.size == 2) %>
 <% if members.size % 3 == 1 %>
   <% members = members[0...-1] + [nil, members[-1], nil] %>
 <% end %>
-<% members << nil while members.size % 3 != 0 %>
+<% unless two_column %>
+  <% members << nil while members.size % 3 != 0 %>
+<% end %>
 
-<div class="container member-showcase">
+<div class="container member-showcase <%= 'two-column' if two_column %>">
   <!-- <h2>Our Exec Board</h2> -->
   <% members.each do |e| %>
     <% is_empty = (e == nil) %>

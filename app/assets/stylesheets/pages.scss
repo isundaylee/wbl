@@ -131,6 +131,12 @@ h3 {
   }
 }
 
+.member-showcase.two-column {
+  .exec-box:nth-child(1) {
+    margin-left: 16.667%;
+  }
+}
+
 // Post-page related css
 
 #postspan {
