@@ -14,6 +14,7 @@ class PagesController < ApplicationController
   def leadership
     @nav_path = "/leadership"
 
+    @presidents = Member.presidents.to_a
     @exec_board = Member.exec.to_a
   end
 
