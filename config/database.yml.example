@@ -10,7 +10,7 @@ default: &default
   pool: 5
 
 development:
-  <<: *default
-  database: wbl
-  username: wbl
-  password: wbl
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000

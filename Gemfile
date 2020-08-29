@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.1.3'
+ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.11.3'
 # Use PostgreSQL
 gem 'pg'
 # Use SCSS for stylesheets
@@ -66,4 +66,4 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'email_validator'
 
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.6', '< 1.4'

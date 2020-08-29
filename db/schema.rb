@@ -16,32 +16,32 @@ ActiveRecord::Schema.define(version: 20180810033514) do
   create_table "alumnas", force: :cascade do |t|
     t.string   "name"
     t.text     "bio"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "portrait_file_name"
     t.string   "portrait_content_type"
-    t.integer  "portrait_file_size"
+    t.integer  "portrait_file_size",    limit: 8
     t.datetime "portrait_updated_at"
   end
 
   create_table "assets", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
-    t.integer  "image_file_size"
+    t.integer  "image_file_size",    limit: 8
     t.datetime "image_updated_at"
   end
 
   create_table "club_digests", force: :cascade do |t|
     t.integer  "volume"
     t.integer  "number"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "file_file_name"
     t.string   "file_content_type"
-    t.integer  "file_file_size"
+    t.integer  "file_file_size",    limit: 8
     t.datetime "file_updated_at"
   end
 
@@ -76,11 +76,11 @@ ActiveRecord::Schema.define(version: 20180810033514) do
 
   create_table "images", force: :cascade do |t|
     t.integer  "event_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "content_file_name"
     t.string   "content_content_type"
-    t.integer  "content_file_size"
+    t.integer  "content_file_size",    limit: 8
     t.datetime "content_updated_at"
   end
 
@@ -90,14 +90,14 @@ ActiveRecord::Schema.define(version: 20180810033514) do
     t.string   "name"
     t.string   "title"
     t.boolean  "exec"
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
     t.string   "portrait_file_name"
     t.string   "portrait_content_type"
-    t.integer  "portrait_file_size"
+    t.integer  "portrait_file_size",    limit: 8
     t.datetime "portrait_updated_at"
     t.integer  "general_department_id"
-    t.boolean  "president",             default: false
+    t.boolean  "president",                       default: false
   end
 
   create_table "posts", force: :cascade do |t|
@@ -109,11 +109,11 @@ ActiveRecord::Schema.define(version: 20180810033514) do
 
   create_table "sponsors", force: :cascade do |t|
     t.integer  "level"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "logo_file_name"
     t.string   "logo_content_type"
-    t.integer  "logo_file_size"
+    t.integer  "logo_file_size",    limit: 8
     t.datetime "logo_updated_at"
   end
 
